@@ -6,7 +6,8 @@ import '../datasources/auth_remote_data_source.dart';
 import '../models/user_model.dart';
 
 class AuthRepositoryImpl extends AuthRepository {
-  late AuthRemoteDataSource _authRemoteDataSource;
+  AuthRepositoryImpl(this._authRemoteDataSource);
+  late final AuthRemoteDataSource _authRemoteDataSource;
 
   @override
   Future<Either<Failure, List<UserModel>>> getUsers() async {

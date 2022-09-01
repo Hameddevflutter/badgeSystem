@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/authentication_page.dart';
@@ -189,14 +188,5 @@ class _SignUpFormState extends State<SignUpForm> {
         ],
       ),
     );
-  }
-
-  Future<void> addUserToDatabase(
-      {required final String firstName,
-      required final String lastName,
-      required final String badge,
-      required final String email,
-      required final String password}) async {
-    final docUser = FirebaseFirestore.instance.collection('users').doc('my-id');
   }
 }
